@@ -16,13 +16,13 @@ const Bottles = ({bottlesPromise}) => {
         const storedCart=[]
 
         for(const id of storedCartIds){
-            console.log(id);
+            // console.log(id);
             const cartBottle = bottles.find(bottle => bottle.id===id);
             if(cartBottle){
                 storedCart.push(cartBottle)
             }
         }
-         console.log('storedCart',storedCart)
+        //  console.log('storedCart',storedCart)
          setCart(storedCart)
 
     },[bottles])
@@ -39,7 +39,7 @@ const Bottles = ({bottlesPromise}) => {
 
     const remainingCart = cart.filter(bottle=>bottle.id !== id);
     setCart(remainingCart);
-    console.log(remainingCart);
+    // console.log(remainingCart);
     removeFromCart(id)
    }
 

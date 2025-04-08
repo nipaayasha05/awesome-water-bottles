@@ -12,7 +12,7 @@ function App() {
   return (
     <>
        <h1 className="text-2xl font-bold">Buy Awesome Water Bottle</h1>
-       <Suspense>
+       <Suspense fallback={<h3>Bottles are loading...</h3>}>
         <Bottles bottlesPromise={bottlesPromise}></Bottles>
        </Suspense>
     </>
